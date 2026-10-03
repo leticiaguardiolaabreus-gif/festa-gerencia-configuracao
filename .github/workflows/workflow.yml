@@ -1,0 +1,39 @@
+name: CI - Festa Gerencia de Configuração
+
+on:
+  push:
+    branches: ["main", "developer"]
+
+  pull_request:
+    branches: ["main", "developer"]
+
+jobs:
+  verificacao-projeto:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Baixar código do repositório
+        uses: actions/checkout@v4.4.0
+
+      - name: Verificar se index.html existe
+        run: |
+          if [ -f "index.html" ]; then
+            echo "index.html encontrado!"
+          else
+            echo "ERRO: index.html nao encontrado."
+            exit 1
+          fi
+
+      - name: Verificar se Dockerfile existe
+        run: |
+          if [ -f "Dockerfile" ]; then
+            echo "Dockerfile encontrado!"
+          else
+            echo "ERRO: Dockerfile nao encontrado."
+            exit 1
+          fi
+
+      - name: Testar build do Dockerfile
+        run: |
+          docker build -t festa-app-test .
+          echo "Dockerfile compilou com sucesso!"
