@@ -21,20 +21,23 @@ festa-gerencia-configuracao/
 │   └── workflows/
 │       └── workflow.yml
 │
-├── Baloes/
-│   ├── inserir.html
-│   ├── procurar.html
-│   ├── alterar.html
-│   └── excluir.html
+├── balao/
+│   ├── create.html
+│   ├── read.html
+│   ├── update.html
+│   └── delete.html
 │
-├── Bolos/
-│   └── ...
+├── bolos/
+│   └── create.html
+│   ├── read.html
+│   ├── update.html
+│   └── delete.html
 │
 ├── Docinhos/
-│   ├── Create.html
-│   ├── Read.html
-│   ├── Update.html
-│   └── Delete.html
+│   ├── create.html
+│   ├── read.html
+│   ├── update.html
+│   └── delete.html
 │
 ├── .gitignore
 ├── Dockerfile
@@ -44,8 +47,8 @@ festa-gerencia-configuracao/
 
 - `index.html`: página inicial e menu de acesso às entidades.
 - `Docinhos/`: páginas do CRUD de Docinhos.
-- `Baloes/`: páginas do CRUD de Balões.
-- `Bolos/`: páginas do CRUD de Bolos.
+- `balao/`: páginas do CRUD de Balões.
+- `bolos/`: páginas do CRUD de Bolos.
 - `.github/workflows/`: arquivos de configuração do GitHub Actions.
 - `Dockerfile`: configuração para executar o projeto em um container Docker.
 - `README.md`: documentação do projeto.
