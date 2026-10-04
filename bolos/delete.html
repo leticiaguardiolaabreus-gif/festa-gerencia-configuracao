@@ -1,28 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Excluir Bolo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Bolo - Festa App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
-  <div class="container mt-5" style="max-width: 600px;">
-    <div class="card border-danger shadow-sm">
-      <div class="card-header bg-danger text-white">
-        <h4 class="mb-0">Excluir Bolo</h4>
-      </div>
-      <div class="card-body">
-        <p class="text-danger fw-bold">Confirma a remoção deste bolo do catálogo?</p>
-        <ul class="list-group mb-3">
-          <li class="list-group-item"><strong>Sabor:</strong> Cenoura com Chocolate</li>
-          <li class="list-group-item"><strong>Fatias:</strong> 15</li>
-        </ul>
-        <form>
-          <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
-          <a href="../index.html" class="btn btn-secondary">Cancelar</a>
-        </form>
-      </div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html">🎉 Festa App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-2">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="create.html">Inserir</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="update.html">Alterar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="delete.html">Excluir</a>
+        </li>
+      </ul>
     </div>
   </div>
+</nav>
+
+<main class="container py-5">
+    <h1 class="mb-4 fw-bold">Excluir Bolo</h1>
+    <p class="lead">Selecione o bolo que deseja excluir:</p>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nome</th>
+                    <th>Sabor</th>
+                    <th>Tamanho</th>
+                    <th>Preço</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bolo de Chocolate</td>
+                    <td>Chocolate</td>
+                    <td>Médio</td>
+                    <td>50.00</td>
+                    <td>
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bolo de Morango</td>
+                    <td>Morango</td>
+                    <td>Grande</td>
+                    <td>70.00</td>
+                    <td>
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bolo de Cenoura</td>
+                    <td>Cenoura</td>
+                    <td>Médio</td>
+                    <td>45.00</td>
+                    <td>
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a href="../index.html" class="btn btn-secondary btn-lg mt-3">Voltar</a>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
