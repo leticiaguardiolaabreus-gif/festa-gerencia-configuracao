@@ -1,43 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Alterar Bolo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Bolo - Festa App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
-  <div class="container mt-5" style="max-width: 600px;">
-    <div class="card shadow-sm">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0">Editar Registro do Bolo</h4>
-      </div>
-      <div class="card-body">
-        <form>
-          <div class="mb-3">
-            <label class="form-label">ID</label>
-            <input type="text" class="form-control" value="1" readonly>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Sabor</label>
-            <input type="text" class="form-control" value="Cenoura com Chocolate">
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Fatias</label>
-            <input type="number" class="form-control" value="15">
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Peso (Kg)</label>
-            <input type="number" step="0.1" class="form-control" value="1.8">
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="diet">
-            <label class="form-check-label" for="diet">Bolo Diet?</label>
-          </div>
-          <button type="submit" class="btn btn-warning">Atualizar</button>
-          <a href="../index.html" class="btn btn-secondary">Cancelar</a>
-        </form>
-      </div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html">🎉 Festa App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-2">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="create.html">Inserir</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="update.html">Alterar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="delete.html">Excluir</a>
+        </li>
+      </ul>
     </div>
   </div>
+</nav>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card border-0 shadow-lg rounded-4">
+                <div class="card-header bg-dark text-white text-center py-4">
+                    <h2>Alterar Bolo</h2>
+                    <p class="mb-0 opacity-75">Encontre o bolo pelo nome e altere seus dados</p>
+                </div>
+                <div class="card-body p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nomeAtual" class="form-label fw-semibold">Nome atual do bolo</label>
+                            <input type="text" class="form-control form-control-lg" id="nomeAtual" name="nomeAtual" placeholder="Digite o nome atual" required>
+                        </div>
+                        <hr class="my-4">
+                        <h5 class="mb-3">Novos dados</h5>
+                        <div class="mb-3">
+                            <label for="novoNome" class="form-label fw-semibold">Nome do bolo</label>
+                            <input type="text" class="form-control form-control-lg" id="novoNome" name="novoNome" placeholder="Digite o novo nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sabor" class="form-label fw-semibold">Sabor</label>
+                            <input type="text" class="form-control form-control-lg" id="sabor" name="sabor" placeholder="Ex.: Chocolate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tamanho" class="form-label fw-semibold">Tamanho</label>
+                            <select class="form-select form-select-lg" id="tamanho" name="tamanho" required>
+                                <option value="">Selecione</option>
+                                <option>Pequeno</option>
+                                <option>Médio</option>
+                                <option>Grande</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="preco" class="form-label fw-semibold">Preço</label>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text">R$</span>
+                                <input type="number" class="form-control" id="preco" name="preco" step="0.01" required>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-warning text-white btn-lg flex-grow-1">Salvar alterações</button>
+                            <a href="../index.html" class="btn btn-outline-secondary btn-lg">Voltar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
